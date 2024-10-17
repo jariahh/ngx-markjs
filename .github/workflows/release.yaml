@@ -15,10 +15,32 @@ jobs:
           node-version: "lts/*"
       - run: npm ci
       - run: npm run build:lib
-      - name: Release
+      - name: Update Version
+        run: npm run update-version
+      # commit and push the updated package.json
+      - name: Commit
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global --add safe.directory /github/workspace
+
+          # Add changes
+          git add charts/values.yaml
+
+          # Check if there are changes to commit
+          git diff-index --quiet HEAD || git commit -m "GitHub Actions - Update Tag Value"
+
+          # Push commits to the remote repository
+          git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+      # create a release to npm
+      - name: Create Release
+        run: npm publish
+        env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+
+
 
 
