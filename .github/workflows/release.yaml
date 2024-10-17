@@ -19,15 +19,11 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm i
-      - run: npm i
-        working-directory: projects/ngx-markjs
-      - run: npm run build
-        working-directory: projects/ngx-markjs
+      - run: npm run build:lib
       - run: npm audit signatures
-        working-directory: projects/ngx-markjs
       - name: Release
         run: npx semantic-release
-        working-directory: projects/ngx-markjs
+        working-directory: dist/ngx-markjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
