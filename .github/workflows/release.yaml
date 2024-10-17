@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm i
+      - run: npm i
         working-directory: projects/ngx-markjs
       - run: npm run build
         working-directory: projects/ngx-markjs
