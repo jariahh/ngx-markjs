@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngx-markjs-demo:build:production"
+              "buildTarget": "ngx-markjs-demo:build:production"
             },
             "development": {
-              "browserTarget": "ngx-markjs-demo:build:development"
+              "buildTarget": "ngx-markjs-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-markjs-demo:build"
+            "buildTarget": "ngx-markjs-demo:build"
           }
         },
         "test": {
