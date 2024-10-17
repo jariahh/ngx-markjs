@@ -1,6 +1,6 @@
 {
   "name": "ngx-markjs-demo",
-  "version": "18.2.8",
+  "version": "18.2.9",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +11,10 @@
     "update-version": "npm version minor",
     "publish": "npm publish --access public"
   },
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@angular/animations": "^18.2.8",
     "@angular/common": "^18.2.8",
@@ -23,6 +26,7 @@
     "@angular/router": "^18.2.8",
     "mark.js": "^8.11.1",
     "rxjs": "~7.5.0",
+    "semantic-release": "^24.1.2",
     "tslib": "^2.8.0",
     "zone.js": "~0.14.10"
   },
