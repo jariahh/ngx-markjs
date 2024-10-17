@@ -5,8 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build:lib": "ng build ngx-markjs",
+    "build:publish": "npm run build:lib && npm run update-version && npm run publish",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "update-version": "npm version minor",
+    "publish": "npm publish --access public"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-markjs",
+  "name": "@jariahdev/ngx-markjs",
   "version": "18.2.8",
   "peerDependencies": {
     "@angular/common": "^18.2.8",
