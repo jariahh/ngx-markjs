@@ -105,7 +105,7 @@
         }
       }
     },
-    "ngx-markjs": {
+    "@jariahdev/ngx-markjs": {
       "projectType": "library",
       "root": "projects/ngx-markjs",
       "sourceRoot": "projects/ngx-markjs/src",

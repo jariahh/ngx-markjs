@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:lib": "ng build ngx-markjs",
-    "build:publish": "npm run build:lib && npm run update-version && npm run publish",
+    "build:lib": "ng build @jariahdev/ngx-markjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "semantic-release": "semantic-release"
