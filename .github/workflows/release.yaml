@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm ci
+        working-directory: projects/ngx-markjs
       - run: npm run build:lib
+        working-directory: projects/ngx-markjs
       - run: npm audit signatures
+        working-directory: projects/ngx-markjs
       - name: Release
         run: npx semantic-release
         working-directory: projects/ngx-markjs
