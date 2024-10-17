@@ -8,9 +8,7 @@
     "build:publish": "npm run build:lib && npm run update-version && npm run publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "update-version": "npm version minor && npm run sub-update-version",
-    "sub-update-version": "cd projects/ngx-markjs && npm version minor",
-    "publish": "npm publish --access public"
+    "semantic-release": "semantic-release"
   },
   "private": false,
   "publishConfig": {
