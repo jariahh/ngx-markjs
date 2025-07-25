@@ -22,7 +22,8 @@ function animate({timing, draw, duration}: {timing: (x: number) => number, draw:
 }
 
 @Directive({
-  selector: '[markjsHighlight]'
+    selector: '[markjsHighlight]',
+    standalone: false
 })
 export class MarkjsHighlightDirective implements OnChanges {
 
