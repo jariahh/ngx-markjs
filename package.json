@@ -7,7 +7,8 @@
     "build:lib": "ng build @jariahdev/ngx-markjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "gemini": "gemini --model gemini-2.5-flash"
   },
   "private": false,
   "publishConfig": {

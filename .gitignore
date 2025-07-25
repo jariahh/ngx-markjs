@@ -4,3 +4,4 @@
 # http://git-scm.com/docs/gitignore
 
 .env
+/.gemini
