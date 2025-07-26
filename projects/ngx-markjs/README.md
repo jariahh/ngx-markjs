@@ -2,7 +2,7 @@
 
 # ngx-markjs
 
-It is Angular 18 wrapper for very cool text highlighting lib [Mark.js](https://markjs.io)
+It is an Angular 20 wrapper for the very cool text highlighting lib [Mark.js](https://markjs.io)
 
 ## How to use
 
