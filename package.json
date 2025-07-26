@@ -1,6 +1,6 @@
 {
   "name": "ngx-markjs-demo",
-  "version": "18.3.0",
+  "version": "20.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
