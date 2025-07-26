@@ -26,6 +26,8 @@ function animate({timing, draw, duration}: {timing: (x: number) => number, draw:
     standalone: false
 })
 export class MarkjsHighlightDirective implements OnChanges {
+  // Added a comment to trigger a new release.
+
 
   @Input() markjsHighlight: string | null = '';
   @Input() markjsConfig: any = {};
