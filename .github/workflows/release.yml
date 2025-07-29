@@ -29,8 +29,31 @@ jobs:
       - name: Run tests
         run: npm run test:lib -- --watch=false --browsers=ChromeHeadless
 
-      - name: Release
+      - name: Prepare for release
+        run: node scripts/prepare-npm-publish.js
+
+      - name: Get next version
+        id: version
+        run: |
+          NEXT_VERSION=$(npx semantic-release --dry-run --no-ci | grep -o 'The next release version is [0-9]*\.[0-9]*\.[0-9]*' | grep -o '[0-9]*\.[0-9]*\.[0-9]*' || echo "none")
+          echo "version=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "Next version: $NEXT_VERSION"
+
+      - name: Update version and publish
+        if: steps.version.outputs.version != 'none'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          cd dist/ngx-markjs
+          npm version ${{ steps.version.outputs.version }} --no-git-tag-version
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+          npm publish --access public
+
+      - name: Create GitHub release
+        if: steps.version.outputs.version != 'none'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: |
+          git tag v${{ steps.version.outputs.version }}
+          git push origin v${{ steps.version.outputs.version }}
+          gh release create v${{ steps.version.outputs.version }} --title "v${{ steps.version.outputs.version }}" --generate-notes
