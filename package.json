@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:lib": "ng test @jariahdev/ngx-markjs",
+    "prepare-release": "cp README.md dist/ngx-markjs/",
     "semantic-release": "semantic-release",
     "gemini": "gemini --model gemini-2.5-flash"
   },
@@ -35,6 +36,7 @@
     "@angular-devkit/build-angular": "^20.1.3",
     "@angular/cli": "~20.1.3",
     "@angular/compiler-cli": "^20.1.3",
+    "@semantic-release/exec": "^7.1.0",
     "@types/jasmine": "~4.0.0",
     "@types/mark.js": "^8.11.8",
     "jasmine-core": "~4.3.0",

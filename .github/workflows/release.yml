@@ -29,9 +29,6 @@ jobs:
       - name: Run tests
         run: npm run test:lib -- --watch=false --browsers=ChromeHeadless
 
-      - name: Copy README to dist
-        run: cp README.md dist/ngx-markjs/
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
