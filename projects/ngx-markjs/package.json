@@ -5,8 +5,8 @@
     "build": "ng build @jariahdev/ngx-markjs"
   },
   "peerDependencies": {
-    "@angular/common": "^20.1.3",
-    "@angular/core": "^20.1.3"
+    "@angular/common": "^19.0.0 || ^20.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0"
   },
   "release": {
     "branches": ["master"],
