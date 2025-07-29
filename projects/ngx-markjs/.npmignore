@@ -1,0 +1,19 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Config files
+tsconfig.*.json
+ng-package.json
+karma.conf.js
+
+# Testing
+*.spec.ts
+*.spec.js
+*.spec.d.ts
+test.ts
+
+# Other
+.gitignore
+.npmignore

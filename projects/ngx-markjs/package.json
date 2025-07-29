@@ -1,20 +1,10 @@
 {
   "name": "@jariahdev/ngx-markjs",
   "version": "0.0.0-development",
-  "scripts": {
-    "build": "ng build @jariahdev/ngx-markjs"
-  },
   "peerDependencies": {
     "@angular/common": "^19.0.0 || ^20.0.0",
-    "@angular/core": "^19.0.0 || ^20.0.0"
+    "@angular/core": "^19.0.0 || ^20.0.0",
+    "mark.js": "^8.11.1"
   },
-  "release": {
-    "branches": ["master"],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/github"
-    ]
-  }
+  "sideEffects": false
 }
