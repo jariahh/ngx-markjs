@@ -6,5 +6,11 @@
     "@angular/core": "^19.0.0 || ^20.0.0",
     "mark.js": "^8.11.1"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "files": [
+    "fesm2022",
+    "index.d.ts",
+    "package.json",
+    "README.md"
+  ]
 }
