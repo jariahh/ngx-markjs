@@ -23,4 +23,4 @@ const readmeSrc = 'README.md';
 const readmeDest = path.join('dist', 'ngx-markjs', 'README.md');
 fs.copyFileSync(readmeSrc, readmeDest);
 
-console.log(`Prepared package for publishing version ${version}`);
+console.log(`Prepared package for publishing version ${distPackageJson.version}`);
