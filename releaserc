@@ -4,7 +4,8 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     ["@semantic-release/npm", {
-      "pkgRoot": "dist/ngx-markjs"
+      "pkgRoot": "dist/ngx-markjs",
+      "tarballDir": false
     }],
     "@semantic-release/github"
   ]
